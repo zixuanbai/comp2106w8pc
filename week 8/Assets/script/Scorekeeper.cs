@@ -5,8 +5,9 @@ using TMPro;
 using UnityEngine.UI;
 public class Scorekeeper : MonoBehaviour
 {
-    public Text coinText;
+    public TextMeshProUGUI coinText;
     private int coinCount = 0;
+   
 
     public void CollectCoin() {
 
