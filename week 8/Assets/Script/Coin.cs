@@ -22,8 +22,9 @@ public class Coin : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            Player player = other.GetComponent<Player>();
             Scorekeeper scorekeeper = FindObjectOfType<Scorekeeper>();
-            scorekeeper.CollectCoin();
+            scorekeeper.CollectCoin(player.player);
             Destroy(this.gameObject);
         }
         
